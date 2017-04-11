@@ -11,7 +11,7 @@ namespace CheeseMVC.Controllers
     {
 
         private readonly CheeseDbContext context;
-        public CategoryController(CheeseDbContext dbContext) { context = dbContext; }
+        public HomeController(CheeseDbContext dbContext) { context = dbContext; }
         public IActionResult Index()
         {
             return View();
