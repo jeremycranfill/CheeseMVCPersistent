@@ -8,8 +8,8 @@ using CheeseMVC.Data;
 namespace CheeseMVC.Migrations
 {
     [DbContext(typeof(CheeseDbContext))]
-    [Migration("20170411233704_First")]
-    partial class First
+    [Migration("20170412025757_MenuView")]
+    partial class MenuView
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

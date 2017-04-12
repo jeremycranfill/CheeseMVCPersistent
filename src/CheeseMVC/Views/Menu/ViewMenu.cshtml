@@ -4,16 +4,28 @@
     ViewBag.Title = Model.Menu.Name;
 }
 
-<ul>
-    <li>
+<h1>@ViewBag.Title</h1>
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        
+    </tr>
+
     @foreach (var cheeseMenu in Model.Items)
     {
-        @cheeseMenu.Cheese.Name
+        <tr>
+            <td>@cheeseMenu.Cheese.Name</td>
+           
+
+        </tr>
     }
+</table>
 
-
-        </li>
-
-</ul>
+@if (Model.Items.Count == 0)
+{
+    <p>No Categories yet!</p>
+}
 
 <p><a asp-controller="Menu" asp-action="AddItem" asp-route-id=@Model.Menu.ID>Add Item</a></p>

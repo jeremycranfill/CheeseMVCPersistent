@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CheeseMVC.Migrations
 {
-    public partial class First : Migration
+    public partial class MenuView : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
