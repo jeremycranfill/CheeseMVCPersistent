@@ -95,7 +95,7 @@ namespace CheeseMVC.Controllers
                 .Where(cm => cm.CheeseID == model.cheeseID)
                 .Where(cm => cm.MenuID == model.menuID).ToList();
 
-                if (existingItems.Count() == 0)
+                if (existingItems.Count < 1)
                 {
                     CheeseMenu cheesemenu = new CheeseMenu();
                     cheesemenu.CheeseID = model.cheeseID;
@@ -104,7 +104,7 @@ namespace CheeseMVC.Controllers
                     context.SaveChanges();
                     return Redirect("/Menu/ViewMenu/" + cheesemenu.MenuID);
                 }
-                else { return Redirect("Index"); }
+                else { return Redirect("/Menu/ViewMenu/" + model.menuID); }
 
 
             }
